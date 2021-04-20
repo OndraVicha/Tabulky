@@ -1,0 +1,238 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(img/minecraft_nahled.jpg) ;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+.column {
+    padding-bottom: 40px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 24%;
+    height: 500px;
+    box-shadow: rgb(29, 29, 29) 5px 5px 10px;
+    
+  }
+  
+ 
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+ 
+ .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+ .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  div.mySlides {
+    display: none;
+  }
+  
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  div.prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+ 
+ .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+   
+    main {
+    width: 1200px;
+    margin: 50px auto; 
+    background-color:#ffffff54; 
+    border: 3px solid #e0e0e0; 
+    padding: 10px;   
+    
+}
+   
+    h1 {
+       text-align: center;
+        color: #fdfdfd;
+        font-size: 200%;
+        text-transform: uppercase;
+    }
+  
+    header {
+        background-color: rgb(15, 24, 146);
+        background-image: linear-gradient(blue,rgb(101, 4, 158));
+        padding: 18px;
+        text-align: center;
+    border-bottom: solid rgb(228, 226, 226) 2px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0); 
+  }
+div.collum {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 24%;
+    height: 500px;
+    padding-bottom: 20px;
+  }
+
+  div.collum img {
+    width: 300px;
+    height: 200px;
+ box-shadow: rgb(29, 29, 29) 5px 5px 10px;
+}
+  
+  
+div.collum img:hover {
+transform: skewX(20deg);
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: rgb(243, 243, 243);
+    border-radius: 10px;
+    background-image: linear-gradient( rgb(0, 0, 255),rgb(101, 3, 146));
+    background-color: blue;
+     
+
+  }
+
+.clear {
+    clear:both;
+}
+
+footer > hr {
+
+margin-top: 120px;
+}
+.topnav {
+  padding-left: 40px;
+  padding-right: 100px;
+  text-align: center;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.795);
+  border-radius: 25px;
+  }
+  
+  .topnav a {
+    float: center;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+       background:blue;
+   }
+  
+  .topnav a.active {
+    color: white;
+       border-radius: 25px;
+       background: #4a00f8;
+   
+   }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  
+

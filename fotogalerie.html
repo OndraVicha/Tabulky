@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Fotogalerie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="script.css">
+
+<body>
+    <header>
+        <h1 class="animate__bounceIn"> Fotogalerie - Minecraft Monstra</h1>
+
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Tabulky v HTML</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="#" class="active">Fotogalerie</a>
+
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <main>
+        <div>
+
+            <div class="column">
+                <img src="img/image002.jpg" alt="Creeper" width="290px" height="500px"
+                    onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <div class="desc">Creeper</div>
+            </div>
+            <div class="column">
+                <img src="img/image009.jpg" alt="Zombie" width="290px" height="500px"
+                    onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <div class="desc">Zombie</div>
+            </div>
+
+
+            <div class="column">
+                <img src="img/image008.jpg" alt="Spider" width="290px" height="500px"
+                    onclick="openModal();currentSlide(3)" class="hover-shadow">
+                <div class="desc">Spider</div>
+            </div>
+
+            <div class="column">
+
+                <img src="img/image001.jpg" alt="Braze" width="290px" height="500px"
+                    onclick="openModal();currentSlide(4)" class="hover-shadow">
+                <div class="desc">Blaze</div>
+            </div>
+            <div class="column">
+                <img src="img/image004.jpg" alt="EnderMan" width="290px" height="500px"
+                    onclick="openModal();currentSlide(5)" class="hover-shadow">
+                <div class="desc">EnderMan</div>
+            </div>
+
+            <div class="column">
+
+                <img src="img/image006.jpg" alt="SilverFish" width="290px" height="500px"
+                    onclick="openModal();currentSlide(6)" class="hover-shadow">
+                <div class="desc">Silverfish</div>
+            </div>
+
+
+            <div class="column">
+
+                <img src="img/image007.jpg" alt="Skeleton" width="290px" height="500px"
+                    onclick="openModal();currentSlide(7)" class="hover-shadow">
+                <div class="desc">Skeleton</div>
+            </div>
+
+
+            <div class="column">
+                <figcaption>
+                    <img src="img/image003.jpg" alt="EnderDragon" width="290px" height="500px"
+                        onclick="openModal();currentSlide(8)" class="hover-shadow">
+                    <div class="desc">EnderDragon</div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:50%">
+            <div id="imgtext"></div>
+        </div>
+
+    </main>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 8</div>
+                <img src="img/image002.jpg" style="width:600px" style="height:600px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 8</div>
+                <img src="img/image009.jpg" style="width:600px" style="height:600px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 8</div>
+                <img src="img/image008.jpg" style="width:600px" style="height:600px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 8</div>
+                <img src="img/image001.jpg" style="width:600px" style="height:600px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 8</div>
+                <img src="img/image004.jpg" style="width:600px" style="height:600px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 8</div>
+                <img src="img/image006.jpg" style="width:600px" style="height:600px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <img src="img/image007.jpg" style="width:600px" style="height:600px">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img src="img/image003.jpg" style="width:600px" style="height:600px">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <p> &copy;2021 - IT1, Ondra Vícha</p>
+    </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</body>
+
+</html>
